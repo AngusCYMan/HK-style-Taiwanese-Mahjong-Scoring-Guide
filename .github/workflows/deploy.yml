@@ -1,0 +1,45 @@
+name: Deploy to GitHub Pages
+
+# 每次 push 到 main 都會自動 deploy
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1️⃣ 先 checkout 代碼
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2️⃣ Setup Node
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      # 3️⃣ 安裝依賴
+      - name: Install dependencies
+        run: npm install
+
+      # 4️⃣ Build
+      - name: Build project
+        run: npm run build
+
+      # 5️⃣ Upload dist folder
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+      # 6️⃣ Deploy to GitHub Pages
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
