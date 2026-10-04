@@ -1,59 +1,67 @@
-
 import React from 'react';
-import { ScoringItem, CATEGORY_TRANSLATIONS } from '../types';
+import { CATEGORY_META, LIMIT_FAN, ScoringCategory } from '../types';
+import { CodedItem } from '../constants';
+import { lineId } from './StripMap';
 
-interface ScoringTableProps {
-  title: string;
-  items: ScoringItem[];
+interface FanPlateProps {
+  fan: number | string;
 }
 
-const ScoringTable: React.FC<ScoringTableProps> = ({ title, items }) => {
-  const titleEn = CATEGORY_TRANSLATIONS[title as keyof typeof CATEGORY_TRANSLATIONS] || '';
+export const FanPlate: React.FC<FanPlateProps> = ({ fan }) => {
+  const isNumber = typeof fan === 'number';
+  const isLimit = isNumber && fan >= LIMIT_FAN;
+  return (
+    <div className={`fan-plate${isLimit ? ' is-limit' : ''}`} aria-label={`${fan} 番`}>
+      <b className={isNumber ? undefined : 'is-formula'}>{fan}</b>
+      <span aria-hidden="true">番</span>
+    </div>
+  );
+};
+
+interface ScoringTableProps {
+  category: ScoringCategory;
+  items: CodedItem[];
+}
+
+const ScoringTable: React.FC<ScoringTableProps> = ({ category, items }) => {
+  const meta = CATEGORY_META[category];
+  const headingId = `${lineId(category)}-title`;
 
   return (
-    <section className="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden transition-colors">
-      <div className="bg-gradient-to-r from-indigo-500 to-purple-600 dark:from-indigo-800 dark:to-slate-800 px-6 py-4">
-        <h2 className="text-xl font-bold text-white tracking-wide">
-          {title} <span className="text-sm font-normal opacity-80 ml-2">{titleEn}</span>
-        </h2>
-      </div>
-      <div className="overflow-x-auto">
-        <table className="w-full text-left border-collapse">
-          <thead>
-            <tr className="bg-slate-50 dark:bg-slate-800/50 border-b border-slate-200 dark:border-slate-800">
-              <th className="px-6 py-4 text-sm font-semibold text-slate-600 dark:text-slate-400 uppercase tracking-wider w-24 text-center">番數 <br/><span className="text-[10px] font-normal">Fan</span></th>
-              <th className="px-6 py-4 text-sm font-semibold text-slate-600 dark:text-slate-400 uppercase tracking-wider min-w-[140px]">名稱 <br/><span className="text-[10px] font-normal">Name</span></th>
-              <th className="px-6 py-4 text-sm font-semibold text-slate-600 dark:text-slate-400 uppercase tracking-wider">說明 <br/><span className="text-[10px] font-normal">Description</span></th>
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
-            {items.map((item) => (
-              <tr key={item.id} className="hover:bg-indigo-50/30 dark:hover:bg-slate-800/40 transition-colors group">
-                <td className="px-6 py-4">
-                  <div className={`text-center font-bold text-lg ${Number(item.fan) >= 40 ? 'text-rose-600 dark:text-rose-500' : 'text-indigo-600 dark:text-indigo-400'}`}>
-                    {item.fan}
-                  </div>
-                </td>
-                <td className="px-6 py-4">
-                  <div className="flex flex-col">
-                    <span className="font-bold text-slate-800 dark:text-slate-200 text-base">{item.name}</span>
-                    <span className="text-slate-400 dark:text-slate-500 text-xs font-medium">{item.nameEn}</span>
-                  </div>
-                </td>
-                <td className="px-6 py-4">
-                  <div className="flex flex-col">
-                    <span className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">{item.description}</span>
-                    <span className="text-slate-400 dark:text-slate-600 text-xs italic">{item.descriptionEn}</span>
-                    {item.example && (
-                      <span className="text-slate-400 dark:text-slate-500 text-xs mt-1 italic">例：{item.example}</span>
-                    )}
-                  </div>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+    <section
+      id={lineId(category)}
+      className="line"
+      aria-labelledby={headingId}
+      data-category={category}
+      style={{ '--line': meta.color, '--line-ink': meta.ink } as React.CSSProperties}
+    >
+      <div className="line__bar" aria-hidden="true" />
+      <header className="line__head">
+        <span className="roundel" aria-hidden="true">{meta.code}</span>
+        <div>
+          <h2 className="line__title" id={headingId}>{category}</h2>
+          <p className="line__en" lang="en">{meta.nameEn}</p>
+        </div>
+        <span className="line__count">{items.length} 項</span>
+      </header>
+      <ol className="stops">
+        {items.map((item) => (
+          <li key={item.id} id={`item-${item.code}`} className="stop">
+            <span className="stop__dot" aria-hidden="true" />
+            <div className="stop__body">
+              <div className="stop__name-row">
+                <h3 className="stop__name">{item.name}</h3>
+                <span className="stop__name-en" lang="en">{item.nameEn}</span>
+              </div>
+              <p className="stop__desc">{item.description}</p>
+              <p className="stop__desc-en" lang="en">{item.descriptionEn}</p>
+              {item.example && <span className="stop__example">例：{item.example}</span>}
+              <div className="stop__code">{item.code}</div>
+            </div>
+            <FanPlate fan={item.fan} />
+          </li>
+        ))}
+      </ol>
     </section>
   );
 };

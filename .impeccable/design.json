@@ -1,0 +1,656 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-30T20:04:50.142Z",
+  "title": "Design System: 港式台灣麻雀番數表",
+  "extensions": {
+    "colorMeta": {
+      "enamel-white": {
+        "role": "neutral",
+        "displayName": "Enamel White",
+        "canonical": "oklch(96.6% 0.004 106.5)",
+        "tonalRamp": [
+          "#0b0b0a",
+          "#242423",
+          "#40403e",
+          "#5e5e5c",
+          "#80807e",
+          "#a5a5a2",
+          "#cbcbc8",
+          "#efefec"
+        ]
+      },
+      "panel-white": {
+        "role": "neutral",
+        "displayName": "Panel White",
+        "canonical": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#808080",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
+        ]
+      },
+      "platform-black": {
+        "role": "primary",
+        "displayName": "Platform Black",
+        "canonical": "oklch(22.2% 0.000 89.9)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#808080",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
+        ]
+      },
+      "ink-secondary": {
+        "role": "neutral",
+        "displayName": "Secondary Ink",
+        "canonical": "oklch(40.8% 0.005 106.6)",
+        "tonalRamp": [
+          "#0b0b09",
+          "#242422",
+          "#40403d",
+          "#5e5e5b",
+          "#80807d",
+          "#a5a5a2",
+          "#cbcbc8",
+          "#efefec"
+        ]
+      },
+      "ink-tertiary": {
+        "role": "neutral",
+        "displayName": "Tertiary Ink",
+        "canonical": "oklch(52.6% 0.008 106.7)",
+        "tonalRamp": [
+          "#0b0b09",
+          "#242421",
+          "#40403c",
+          "#5e5e59",
+          "#80807c",
+          "#a5a5a0",
+          "#cbcbc6",
+          "#efefea"
+        ]
+      },
+      "rule-grey": {
+        "role": "neutral",
+        "displayName": "Rule Grey",
+        "canonical": "oklch(88.4% 0.008 106.6)",
+        "tonalRamp": [
+          "#0b0b09",
+          "#242421",
+          "#40403d",
+          "#5e5e5a",
+          "#80807c",
+          "#a5a5a0",
+          "#cbcbc5",
+          "#efefe9"
+        ]
+      },
+      "plain-plate": {
+        "role": "neutral",
+        "displayName": "Plain Plate",
+        "canonical": "oklch(94.2% 0.007 106.5)",
+        "tonalRamp": [
+          "#0b0b0a",
+          "#242422",
+          "#40403d",
+          "#5e5e5b",
+          "#80807d",
+          "#a5a5a1",
+          "#cbcbc6",
+          "#efefea"
+        ]
+      },
+      "exit-yellow": {
+        "role": "secondary",
+        "displayName": "Exit Yellow",
+        "canonical": "oklch(84.0% 0.172 90.4)",
+        "tonalRamp": [
+          "#1b0400",
+          "#381e00",
+          "#583a00",
+          "#7b5800",
+          "#a27a00",
+          "#cb9e00",
+          "#f5c401",
+          "#ffe95e"
+        ]
+      },
+      "night-ground": {
+        "role": "neutral",
+        "displayName": "Night Ground",
+        "canonical": "oklch(16.8% 0.003 248.0)",
+        "tonalRamp": [
+          "#0a0b0c",
+          "#232425",
+          "#3f4041",
+          "#5d5e5f",
+          "#7f8081",
+          "#a4a5a6",
+          "#cacacb",
+          "#eeeeef"
+        ]
+      },
+      "night-panel": {
+        "role": "neutral",
+        "displayName": "Night Panel",
+        "canonical": "oklch(20.9% 0.004 264.5)",
+        "tonalRamp": [
+          "#0a0b0d",
+          "#232426",
+          "#3f4042",
+          "#5c5e60",
+          "#7f8082",
+          "#a4a4a6",
+          "#c9cacc",
+          "#eeeef0"
+        ]
+      },
+      "night-ink": {
+        "role": "neutral",
+        "displayName": "Night Ink",
+        "canonical": "oklch(95.7% 0.007 106.5)",
+        "tonalRamp": [
+          "#0b0b0a",
+          "#242422",
+          "#40403d",
+          "#5e5e5b",
+          "#80807d",
+          "#a5a5a1",
+          "#cbcbc6",
+          "#efefea"
+        ]
+      },
+      "night-ink-secondary": {
+        "role": "neutral",
+        "displayName": "Night Secondary Ink",
+        "canonical": "oklch(81.8% 0.010 106.6)",
+        "tonalRamp": [
+          "#0b0b09",
+          "#242421",
+          "#40403c",
+          "#5e5e59",
+          "#81817b",
+          "#a5a59f",
+          "#cbcbc4",
+          "#efefe8"
+        ]
+      },
+      "night-ink-tertiary": {
+        "role": "neutral",
+        "displayName": "Night Tertiary Ink",
+        "canonical": "oklch(68.4% 0.010 106.7)",
+        "tonalRamp": [
+          "#0b0b08",
+          "#242420",
+          "#40403b",
+          "#5e5e58",
+          "#81817a",
+          "#a5a59e",
+          "#cbcbc4",
+          "#efefe9"
+        ]
+      },
+      "night-rule": {
+        "role": "neutral",
+        "displayName": "Night Rule",
+        "canonical": "oklch(29.7% 0.006 271.2)",
+        "tonalRamp": [
+          "#0a0b0d",
+          "#232427",
+          "#3f4043",
+          "#5c5d60",
+          "#7f8083",
+          "#a3a4a7",
+          "#c9cacd",
+          "#edeef1"
+        ]
+      },
+      "night-plain-plate": {
+        "role": "neutral",
+        "displayName": "Night Plain Plate",
+        "canonical": "oklch(27.3% 0.006 271.2)",
+        "tonalRamp": [
+          "#0a0b0d",
+          "#232427",
+          "#3f4043",
+          "#5c5d60",
+          "#7f8083",
+          "#a3a4a7",
+          "#c9cacd",
+          "#edeef1"
+        ]
+      },
+      "night-plate-ink": {
+        "role": "neutral",
+        "displayName": "Night Plate Ink",
+        "canonical": "oklch(18.2% 0.003 248.0)",
+        "tonalRamp": [
+          "#0a0b0c",
+          "#232425",
+          "#3f4041",
+          "#5d5e5f",
+          "#7f8081",
+          "#a4a5a6",
+          "#cacacb",
+          "#eeeeef"
+        ]
+      },
+      "line-ba-red": {
+        "role": "tertiary",
+        "displayName": "BA Red",
+        "canonical": "oklch(56.3% 0.213 25.3)",
+        "tonalRamp": [
+          "#360000",
+          "#5f0000",
+          "#890000",
+          "#b40015",
+          "#e23639",
+          "#ff6963",
+          "#ff978e",
+          "#ffc1b6"
+        ]
+      },
+      "line-hf-blue": {
+        "role": "tertiary",
+        "displayName": "HF Blue",
+        "canonical": "oklch(53.6% 0.144 248.0)",
+        "tonalRamp": [
+          "#000436",
+          "#00225a",
+          "#004180",
+          "#0060a7",
+          "#2c85ce",
+          "#5eabf1",
+          "#8bd1ff",
+          "#b4f5ff"
+        ]
+      },
+      "line-tx-green": {
+        "role": "tertiary",
+        "displayName": "TX Green",
+        "canonical": "oklch(53.6% 0.146 150.6)",
+        "tonalRamp": [
+          "#001500",
+          "#003200",
+          "#005113",
+          "#00722f",
+          "#2f9752",
+          "#61bb79",
+          "#8fe1a2",
+          "#b8ffc9"
+        ]
+      },
+      "line-dr-orange": {
+        "role": "tertiary",
+        "displayName": "DR Orange",
+        "canonical": "oklch(71.0% 0.175 50.9)",
+        "tonalRamp": [
+          "#2a0000",
+          "#4e0000",
+          "#741d00",
+          "#9c3b00",
+          "#c95c00",
+          "#f77f27",
+          "#ffa961",
+          "#ffd08e"
+        ]
+      },
+      "line-ch-purple": {
+        "role": "tertiary",
+        "displayName": "CH Purple",
+        "canonical": "oklch(50.5% 0.137 310.4)",
+        "tonalRamp": [
+          "#19002b",
+          "#35084d",
+          "#542670",
+          "#754395",
+          "#9868b9",
+          "#bc8fdc",
+          "#e1b6ff",
+          "#ffdcff"
+        ]
+      },
+      "line-fa-sky": {
+        "role": "tertiary",
+        "displayName": "FA Sky",
+        "canonical": "oklch(74.4% 0.110 232.4)",
+        "tonalRamp": [
+          "#000d23",
+          "#002943",
+          "#004665",
+          "#116689",
+          "#358ab2",
+          "#55b0dd",
+          "#81d7ff",
+          "#abfbff"
+        ]
+      },
+      "line-cp-brick": {
+        "role": "tertiary",
+        "displayName": "CP Brick",
+        "canonical": "oklch(48.1% 0.132 34.0)",
+        "tonalRamp": [
+          "#2a0000",
+          "#4d0000",
+          "#731d08",
+          "#9a3b26",
+          "#be624d",
+          "#e28a75",
+          "#ffb29e",
+          "#ffd8c5"
+        ]
+      },
+      "line-wd-teal": {
+        "role": "tertiary",
+        "displayName": "WD Teal",
+        "canonical": "oklch(56.8% 0.097 196.6)",
+        "tonalRamp": [
+          "#001215",
+          "#002e31",
+          "#004d4f",
+          "#006d6f",
+          "#209193",
+          "#59b6b7",
+          "#88dbdc",
+          "#b2ffff"
+        ]
+      },
+      "line-oc-pink": {
+        "role": "tertiary",
+        "displayName": "OC Pink",
+        "canonical": "oklch(71.7% 0.153 349.3)",
+        "tonalRamp": [
+          "#240011",
+          "#46002c",
+          "#6b1c49",
+          "#913969",
+          "#bc588d",
+          "#e979b3",
+          "#ffa3d9",
+          "#ffcafc"
+        ]
+      },
+      "line-ev-lime": {
+        "role": "tertiary",
+        "displayName": "EV Lime",
+        "canonical": "oklch(76.7% 0.170 112.4)",
+        "tonalRamp": [
+          "#0e0c00",
+          "#272700",
+          "#434400",
+          "#606400",
+          "#838800",
+          "#a7ae00",
+          "#cdd543",
+          "#f0f979"
+        ]
+      },
+      "line-sp-grey": {
+        "role": "tertiary",
+        "displayName": "SP Grey",
+        "canonical": "oklch(66.6% 0.013 248.0)",
+        "tonalRamp": [
+          "#080c0f",
+          "#202529",
+          "#3b4045",
+          "#595e64",
+          "#7a8188",
+          "#9fa5ac",
+          "#c5cbd2",
+          "#e9eff6"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Header sign title only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Line signboard titles and rules-section heads."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Stop (item) names, flow steps, notice heads."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Chinese descriptions, 62–66ch."
+      },
+      "body-en": {
+        "displayName": "Body EN",
+        "purpose": "English description line under the Chinese, 70ch."
+      },
+      "label-en": {
+        "displayName": "Label EN",
+        "purpose": "English names beside or under Chinese headings."
+      },
+      "numeral": {
+        "displayName": "Plate Numeral",
+        "purpose": "番 values on number plates, tabular lining figures."
+      },
+      "code": {
+        "displayName": "Code",
+        "purpose": "Line codes in dots and roundels; item codes under stops."
+      }
+    },
+    "shadows": [
+      {
+        "name": "notice-lift",
+        "value": "0 1px 2px rgba(20, 20, 18, 0.06), 0 6px 18px -8px rgba(20, 20, 18, 0.18)",
+        "purpose": "Notice card and 雙食 worked-example card only (light)."
+      },
+      {
+        "name": "notice-lift-night",
+        "value": "0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 22px -10px rgba(0, 0, 0, 0.7)",
+        "purpose": "Same cards in dark mode."
+      },
+      {
+        "name": "ground-halo",
+        "value": "0 0 0 3px var(--ground)",
+        "purpose": "Knockout halo cutting station dots out of the track; not elevation."
+      },
+      {
+        "name": "focus-ring",
+        "value": "outline: 3px solid #f5c400; outline-offset: 2px",
+        "purpose": "Every focus-visible element."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "All transform motion."
+      },
+      {
+        "name": "train-slide",
+        "value": "transform 0.55s cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Signature: train ring slides to the active station."
+      },
+      {
+        "name": "station-dot",
+        "value": "transform 0.35s cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Station dot transform."
+      },
+      {
+        "name": "state-colour",
+        "value": "0.2s ease",
+        "purpose": "Background, border and colour state transitions; theme swap is 0.25s."
+      },
+      {
+        "name": "target-flash",
+        "value": "1.8s ease-out; 9% ink background fading out; dot pulses 1.6x twice at 0.9s",
+        "purpose": "Stop landed on via a chip or jump."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "durations 0.01ms, scroll-behavior auto",
+        "purpose": "prefers-reduced-motion: reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "phone-compact",
+        "value": "480px"
+      },
+      {
+        "name": "fact-stack",
+        "value": "560px"
+      },
+      {
+        "name": "sidebar",
+        "value": "1024px"
+      },
+      {
+        "name": "shell-max",
+        "value": "1200px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Direction Plates",
+      "kind": "nav",
+      "refersTo": "direction-plate",
+      "description": "Segmented view switch styled as sign plates; the active plate inverts.",
+      "html": "<div class=\"ds-plates\"><button class=\"ds-plate\" aria-pressed=\"true\"><b>番數一覽</b><span>Fan Table</span></button><button class=\"ds-plate\" aria-pressed=\"false\"><b>規則流程</b><span>Rules</span></button></div>",
+      "css": ".ds-plates{--ground:#f4f4f1;--panel:#fff;--ink:#1b1b1b;--ink-2:#4a4a47;--ink-3:#6b6b66;--rule:#d9d9d3;--rule-strong:#1b1b1b;--plate:#1b1b1b;--plate-ink:#fff;--plain-plate:#ecece7;--plain-plate-ink:#1b1b1b;--exit:#f5c400;--exit-ink:#1b1b1b;--zh:'Noto Sans TC','PingFang HK','Microsoft JhengHei',sans-serif;--en:'Source Sans 3','Noto Sans TC',sans-serif;--ease-out:cubic-bezier(0.16,1,0.3,1);font-family:var(--zh);color:var(--ink);} .ds-plates{display:inline-flex;border:2px solid var(--rule-strong);border-radius:8px;overflow:hidden;background:var(--panel);} .ds-plate{font:inherit;color:inherit;background:none;border:0;cursor:pointer;display:flex;flex-direction:column;align-items:flex-start;padding:7px 16px 6px;line-height:1.15;min-width:108px;transition:background-color .2s ease,color .2s ease;} .ds-plate+.ds-plate{border-left:2px solid var(--rule-strong);} .ds-plate b{font-weight:700;font-size:1rem;} .ds-plate span{font-family:var(--en);font-size:.75rem;font-weight:600;color:var(--ink-3);} .ds-plate[aria-pressed=\"true\"]{background:var(--plate);color:var(--plate-ink);} .ds-plate[aria-pressed=\"true\"] span{color:inherit;opacity:.75;} .ds-plate:not([aria-pressed=\"true\"]):hover{background:var(--plain-plate);} .ds-plate:focus-visible{outline:3px solid var(--exit);outline-offset:2px;}"
+    },
+    {
+      "name": "Theme Button",
+      "kind": "button",
+      "refersTo": "theme-button",
+      "description": "44px square control holding a stroked inline SVG.",
+      "html": "<button class=\"ds-theme-btn\" aria-label=\"Dark mode\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linejoin=\"round\"><path d=\"M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z\"/></svg></button>",
+      "css": ".ds-theme-btn{--ground:#f4f4f1;--panel:#fff;--ink:#1b1b1b;--ink-2:#4a4a47;--ink-3:#6b6b66;--rule:#d9d9d3;--rule-strong:#1b1b1b;--plate:#1b1b1b;--plate-ink:#fff;--plain-plate:#ecece7;--plain-plate-ink:#1b1b1b;--exit:#f5c400;--exit-ink:#1b1b1b;--zh:'Noto Sans TC','PingFang HK','Microsoft JhengHei',sans-serif;--en:'Source Sans 3','Noto Sans TC',sans-serif;--ease-out:cubic-bezier(0.16,1,0.3,1);font-family:var(--zh);color:var(--ink);} .ds-theme-btn{width:44px;height:44px;display:grid;place-items:center;border-radius:8px;border:2px solid var(--rule);background:none;color:var(--ink);cursor:pointer;transition:border-color .2s ease;} .ds-theme-btn:hover{border-color:var(--rule-strong);} .ds-theme-btn svg{width:20px;height:20px;} .ds-theme-btn:focus-visible{outline:3px solid var(--exit);outline-offset:2px;}"
+    },
+    {
+      "name": "Strip Map with Train",
+      "kind": "custom",
+      "refersTo": "station-dot",
+      "description": "Signature: coded line-colour stations on a track, the hollow train ring on the active one, and the exit-yellow 上次 flag.",
+      "html": "<ol class=\"ds-strip\"><li class=\"ds-track\"></li><li class=\"ds-st\" style=\"--line:#d6202b;--line-ink:#fff\"><a href=\"#\"><span class=\"ds-dot\">BA</span></a></li><li class=\"ds-st\" style=\"--line:#0071bc;--line-ink:#fff\"><a href=\"#\"><span class=\"ds-dot\">HF</span></a><span class=\"ds-flag\">上次</span></li><li class=\"ds-st\" style=\"--line:#00843d;--line-ink:#fff\"><a href=\"#\" aria-current=\"true\"><span class=\"ds-dot\">TX</span><span class=\"ds-train\"></span></a></li><li class=\"ds-st\" style=\"--line:#f47b20;--line-ink:#1b1b1b\"><a href=\"#\"><span class=\"ds-dot\">DR</span></a></li><li class=\"ds-st\" style=\"--line:#8e959c;--line-ink:#111\"><a href=\"#\"><span class=\"ds-dot\">SP</span></a></li></ol>",
+      "css": ".ds-strip{--ground:#f4f4f1;--panel:#fff;--ink:#1b1b1b;--ink-2:#4a4a47;--ink-3:#6b6b66;--rule:#d9d9d3;--rule-strong:#1b1b1b;--plate:#1b1b1b;--plate-ink:#fff;--plain-plate:#ecece7;--plain-plate-ink:#1b1b1b;--exit:#f5c400;--exit-ink:#1b1b1b;--zh:'Noto Sans TC','PingFang HK','Microsoft JhengHei',sans-serif;--en:'Source Sans 3','Noto Sans TC',sans-serif;--ease-out:cubic-bezier(0.16,1,0.3,1);font-family:var(--zh);color:var(--ink);} .ds-strip{list-style:none;position:relative;display:flex;justify-content:space-between;margin:0;padding:12px 16px 8px;background:var(--ground);width:320px;} .ds-track{position:absolute;left:30px;right:30px;top:32px;height:4px;border-radius:2px;background:var(--rule);} .ds-st{position:relative;z-index:1;flex:1 1 0;display:flex;justify-content:center;} .ds-st a{position:relative;display:flex;align-items:center;justify-content:center;min-width:30px;min-height:44px;border-radius:8px;text-decoration:none;} .ds-dot{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:var(--line);color:var(--line-ink);font-family:var(--en);font-weight:700;font-size:.62rem;box-shadow:0 0 0 3px var(--ground);transition:transform .35s var(--ease-out);} .ds-train{position:absolute;width:34px;height:34px;left:50%;top:50%;margin:-17px 0 0 -17px;box-sizing:border-box;border-radius:50%;border:3px solid var(--ink);box-shadow:0 0 0 2px var(--ground);transition:transform .55s var(--ease-out);pointer-events:none;} .ds-flag{position:absolute;top:-9px;left:50%;transform:translateX(-50%);z-index:2;font-size:.6rem;font-weight:700;line-height:1;white-space:nowrap;padding:2px 4px;border-radius:3px;background:var(--exit);color:var(--exit-ink);} .ds-st a:focus-visible{outline:3px solid var(--exit);outline-offset:2px;}"
+    },
+    {
+      "name": "Line Signboard and Stop Row",
+      "kind": "card",
+      "refersTo": "roundel",
+      "description": "Line bar, roundel and bilingual head over a stop on the line track ending in a 番 plate.",
+      "html": "<section class=\"ds-line\" style=\"--line:#d6202b;--line-ink:#fff\"><div class=\"ds-bar\"></div><header class=\"ds-head\"><span class=\"ds-roundel\">BA</span><div><h2 class=\"ds-title\">基礎牌型番</h2><p class=\"ds-en\">Basic Patterns</p></div><span class=\"ds-count\">12 項</span></header><ol class=\"ds-stops\"><li class=\"ds-stop\"><span class=\"ds-sdot\"></span><div><div class=\"ds-nrow\"><h3 class=\"ds-name\">平糊</h3><span class=\"ds-name-en\">All Chows</span></div><p class=\"ds-desc\">全部由順子組成。</p><p class=\"ds-desc-en\">Every set is a chow.</p><div class=\"ds-code\">BA-02</div></div><div class=\"ds-fan\"><b>5</b><span>番</span></div></li></ol></section>",
+      "css": ".ds-line{--ground:#f4f4f1;--panel:#fff;--ink:#1b1b1b;--ink-2:#4a4a47;--ink-3:#6b6b66;--rule:#d9d9d3;--rule-strong:#1b1b1b;--plate:#1b1b1b;--plate-ink:#fff;--plain-plate:#ecece7;--plain-plate-ink:#1b1b1b;--exit:#f5c400;--exit-ink:#1b1b1b;--zh:'Noto Sans TC','PingFang HK','Microsoft JhengHei',sans-serif;--en:'Source Sans 3','Noto Sans TC',sans-serif;--ease-out:cubic-bezier(0.16,1,0.3,1);font-family:var(--zh);color:var(--ink);} .ds-line{background:var(--ground);padding:16px;max-width:560px;} .ds-bar{height:8px;border-radius:4px;background:var(--line);} .ds-head{display:flex;align-items:center;gap:14px;padding:16px 0 10px;} .ds-roundel{flex:none;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--line);color:var(--line-ink);font-family:var(--en);font-weight:700;font-size:1.05rem;} .ds-title{font-weight:900;font-size:1.6rem;line-height:1.15;letter-spacing:.02em;margin:0;} .ds-en{font-family:var(--en);font-weight:600;color:var(--ink-2);font-size:.98rem;margin:0;} .ds-count{margin-left:auto;font-size:.8rem;color:var(--ink-3);} .ds-stops{list-style:none;position:relative;margin:0;padding:0;} .ds-stops::before{content:\"\";position:absolute;left:22px;top:10px;bottom:10px;width:4px;border-radius:2px;background:var(--line);} .ds-stop{position:relative;display:grid;grid-template-columns:48px minmax(0,1fr) auto;gap:4px 12px;align-items:center;padding:12px 0;} .ds-sdot{justify-self:center;width:16px;height:16px;box-sizing:border-box;border-radius:50%;background:var(--ground);border:4px solid var(--line);position:relative;z-index:1;} .ds-nrow{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 10px;} .ds-name{font-weight:700;font-size:1.08rem;line-height:1.3;margin:0;} .ds-name-en{font-family:var(--en);font-weight:600;font-size:.85rem;color:var(--ink-3);} .ds-desc{font-size:.93rem;color:var(--ink-2);margin:2px 0 0;} .ds-desc-en{font-family:var(--en);font-size:.84rem;color:var(--ink-3);margin:0;} .ds-code{font-family:var(--en);font-weight:700;font-size:.72rem;color:var(--ink-3);letter-spacing:.04em;} .ds-fan{min-width:64px;padding:6px 10px 5px;border-radius:6px;text-align:center;background:var(--plain-plate);line-height:1;} .ds-fan b{display:block;font-family:var(--en);font-variant-numeric:tabular-nums lining-nums;font-weight:700;font-size:1.55rem;} .ds-fan span{display:block;font-size:.68rem;font-weight:700;margin-top:3px;opacity:.7;}"
+    },
+    {
+      "name": "Fan Plates",
+      "kind": "custom",
+      "refersTo": "fan-plate",
+      "description": "Standard 番 plate and the inverted limit plate (≥40番).",
+      "html": "<div class=\"ds-fans\"><div class=\"ds-fanp\"><b>8</b><span>番</span></div><div class=\"ds-fanp is-limit\"><b>40</b><span>番</span></div></div>",
+      "css": ".ds-fans{--ground:#f4f4f1;--panel:#fff;--ink:#1b1b1b;--ink-2:#4a4a47;--ink-3:#6b6b66;--rule:#d9d9d3;--rule-strong:#1b1b1b;--plate:#1b1b1b;--plate-ink:#fff;--plain-plate:#ecece7;--plain-plate-ink:#1b1b1b;--exit:#f5c400;--exit-ink:#1b1b1b;--zh:'Noto Sans TC','PingFang HK','Microsoft JhengHei',sans-serif;--en:'Source Sans 3','Noto Sans TC',sans-serif;--ease-out:cubic-bezier(0.16,1,0.3,1);font-family:var(--zh);color:var(--ink);} .ds-fans{display:flex;gap:12px;} .ds-fanp{min-width:64px;padding:6px 10px 5px;border-radius:6px;text-align:center;background:var(--plain-plate);color:var(--plain-plate-ink);line-height:1;} .ds-fanp b{display:block;font-family:var(--en);font-variant-numeric:tabular-nums lining-nums;font-weight:700;font-size:1.55rem;letter-spacing:-.01em;} .ds-fanp span{display:block;font-size:.68rem;font-weight:700;margin-top:3px;opacity:.7;} .ds-fanp.is-limit{background:var(--plate);color:var(--plate-ink);} .ds-fanp.is-limit span{opacity:.8;}"
+    },
+    {
+      "name": "Item Chip",
+      "kind": "chip",
+      "refersTo": "item-chip",
+      "description": "Pill link from a rule to the stop it names, led by a line-coloured code pill.",
+      "html": "<a class=\"ds-chip\" href=\"#\" style=\"--line:#0071bc;--line-ink:#fff\"><span class=\"ds-chip-code\">HF-03</span>正花</a>",
+      "css": ".ds-chip{--ground:#f4f4f1;--panel:#fff;--ink:#1b1b1b;--ink-2:#4a4a47;--ink-3:#6b6b66;--rule:#d9d9d3;--rule-strong:#1b1b1b;--plate:#1b1b1b;--plate-ink:#fff;--plain-plate:#ecece7;--plain-plate-ink:#1b1b1b;--exit:#f5c400;--exit-ink:#1b1b1b;--zh:'Noto Sans TC','PingFang HK','Microsoft JhengHei',sans-serif;--en:'Source Sans 3','Noto Sans TC',sans-serif;--ease-out:cubic-bezier(0.16,1,0.3,1);font-family:var(--zh);color:var(--ink);} .ds-chip{display:inline-flex;align-items:center;gap:6px;padding:3px 9px 3px 4px;border-radius:999px;background:var(--panel);border:1px solid var(--rule);font-weight:700;font-size:.92rem;line-height:1.3;text-decoration:none;color:var(--ink);transition:border-color .2s ease,background-color .2s ease;} .ds-chip:hover{border-color:var(--ink);} .ds-chip-code{font-family:var(--en);font-size:.7rem;font-weight:700;padding:2px 6px;border-radius:999px;background:var(--line);color:var(--line-ink);} .ds-chip:focus-visible{outline:3px solid var(--exit);outline-offset:2px;}"
+    },
+    {
+      "name": "Relation Tags",
+      "kind": "chip",
+      "refersTo": "rel-tag-contains",
+      "description": "Typed overlap relations: 包含 outline, 取最高 grey, 不同計 black, 相加 yellow.",
+      "html": "<div class=\"ds-tags\"><span class=\"ds-tag\">包含</span><span class=\"ds-tag is-highest\">取最高</span><span class=\"ds-tag is-exclusive\">不同計</span><span class=\"ds-tag is-add\">相加</span></div>",
+      "css": ".ds-tags{--ground:#f4f4f1;--panel:#fff;--ink:#1b1b1b;--ink-2:#4a4a47;--ink-3:#6b6b66;--rule:#d9d9d3;--rule-strong:#1b1b1b;--plate:#1b1b1b;--plate-ink:#fff;--plain-plate:#ecece7;--plain-plate-ink:#1b1b1b;--exit:#f5c400;--exit-ink:#1b1b1b;--zh:'Noto Sans TC','PingFang HK','Microsoft JhengHei',sans-serif;--en:'Source Sans 3','Noto Sans TC',sans-serif;--ease-out:cubic-bezier(0.16,1,0.3,1);font-family:var(--zh);color:var(--ink);} .ds-tags{display:flex;gap:10px;flex-wrap:wrap;} .ds-tag{font-weight:700;font-size:.85rem;padding:3px 10px;border-radius:999px;border:2px solid var(--ink);} .ds-tag.is-highest{background:var(--plain-plate);border-color:var(--plain-plate);} .ds-tag.is-exclusive{background:var(--plate);color:var(--plate-ink);border-color:var(--plate);} .ds-tag.is-add{background:var(--exit);color:var(--exit-ink);border-color:var(--exit);}"
+    },
+    {
+      "name": "Notice Card",
+      "kind": "card",
+      "refersTo": "notice-card",
+      "description": "The lifted card: inverted head bar over ruled definition rows with formula tokens.",
+      "html": "<section class=\"ds-notice\"><div class=\"ds-nhead\"><h2>基本規則</h2><span>Basics</span></div><dl class=\"ds-nbody\"><div class=\"ds-fact\"><dt>牌數</dt><dd><span class=\"ds-formula\"><span class=\"ds-token\">手牌</span><span class=\"ds-op\">+</span><span class=\"ds-token\">食糊張</span><span class=\"ds-op\">=</span><span class=\"ds-token\">17 張</span></span></dd></div><div class=\"ds-fact\"><dt>底番</dt><dd>每次食糊加 5 番底。<span class=\"ds-en\">Every win takes a 5-fan base.</span></dd></div></dl></section>",
+      "css": ".ds-notice{--ground:#f4f4f1;--panel:#fff;--ink:#1b1b1b;--ink-2:#4a4a47;--ink-3:#6b6b66;--rule:#d9d9d3;--rule-strong:#1b1b1b;--plate:#1b1b1b;--plate-ink:#fff;--plain-plate:#ecece7;--plain-plate-ink:#1b1b1b;--exit:#f5c400;--exit-ink:#1b1b1b;--zh:'Noto Sans TC','PingFang HK','Microsoft JhengHei',sans-serif;--en:'Source Sans 3','Noto Sans TC',sans-serif;--ease-out:cubic-bezier(0.16,1,0.3,1);font-family:var(--zh);color:var(--ink);} .ds-notice{background:var(--panel);border-radius:10px;box-shadow:0 1px 2px rgba(20,20,18,.06),0 6px 18px -8px rgba(20,20,18,.18);overflow:hidden;max-width:520px;} .ds-nhead{background:var(--plate);color:var(--plate-ink);padding:12px 20px;display:flex;align-items:baseline;gap:10px;} .ds-nhead h2{font-size:1.1rem;font-weight:700;margin:0;} .ds-nhead span{font-family:var(--en);font-weight:600;font-size:.85rem;opacity:.75;} .ds-nbody{padding:8px 20px;margin:0;} .ds-fact{display:grid;grid-template-columns:7.5em minmax(0,1fr);gap:4px 16px;padding:14px 0;border-bottom:1px solid var(--rule);} .ds-fact:last-child{border-bottom:0;} .ds-fact dt{font-weight:700;} .ds-fact dd{margin:0;color:var(--ink-2);} .ds-en{display:block;font-family:var(--en);font-size:.85rem;color:var(--ink-3);} .ds-formula{display:inline-flex;flex-wrap:wrap;align-items:center;gap:6px;font-weight:700;color:var(--ink);} .ds-op{color:var(--ink-3);font-family:var(--en);} .ds-token{padding:1px 8px;border-radius:4px;background:var(--plain-plate);}"
+    },
+    {
+      "name": "Calculation Flow",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Numbered steps on a black line; the 雙食 branch fills exit yellow.",
+      "html": "<ol class=\"ds-flow\"><li><span class=\"ds-n\">1</span><div><p class=\"ds-t\">確認糊牌</p></div></li><li class=\"is-branch\"><span class=\"ds-n\">2</span><div><p class=\"ds-t\">雙食？分別計番再相加</p></div></li><li><span class=\"ds-n\">3</span><div><p class=\"ds-t\">加 5 番底</p></div></li></ol>",
+      "css": ".ds-flow{--ground:#f4f4f1;--panel:#fff;--ink:#1b1b1b;--ink-2:#4a4a47;--ink-3:#6b6b66;--rule:#d9d9d3;--rule-strong:#1b1b1b;--plate:#1b1b1b;--plate-ink:#fff;--plain-plate:#ecece7;--plain-plate-ink:#1b1b1b;--exit:#f5c400;--exit-ink:#1b1b1b;--zh:'Noto Sans TC','PingFang HK','Microsoft JhengHei',sans-serif;--en:'Source Sans 3','Noto Sans TC',sans-serif;--ease-out:cubic-bezier(0.16,1,0.3,1);font-family:var(--zh);color:var(--ink);} .ds-flow{list-style:none;position:relative;margin:0;padding:0;max-width:420px;background:var(--ground);} .ds-flow::before{content:\"\";position:absolute;left:17px;top:18px;bottom:18px;width:4px;border-radius:2px;background:var(--ink);} .ds-flow li{position:relative;display:grid;grid-template-columns:38px minmax(0,1fr);gap:14px;padding:8px 0 14px;} .ds-n{width:38px;height:38px;box-sizing:border-box;border-radius:50%;display:grid;place-items:center;background:var(--ground);border:4px solid var(--ink);font-family:var(--en);font-weight:700;position:relative;z-index:1;} .ds-flow li.is-branch .ds-n{background:var(--exit);color:var(--exit-ink);border-color:var(--exit);} .ds-t{font-weight:700;font-size:1.02rem;padding-top:6px;margin:0;}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The House-Rule Metro",
+    "overview": "The house rules are drawn as a transit system in the idiom of Hong Kong MTR bilingual signage. Every scoring category is a coloured line with a two-letter code, every 番 is a stop on that line, and every value sits on a number plate at the end of the row. The page is enamel-sign white with platform-black type, and the line colours appear only as small marks that identify a line: the bar, the roundel, station dots and the stop track. They never fill whole areas.\n\nThe system is dense and made for scanning. It has to work mid-game, when someone reads a phone one-handed at the table, and it has to work for careful reading at home. Chinese always leads in heavy Noto Sans TC 黑體. English follows underneath in Source Sans 3, smaller and greyer, as the second line of a bilingual sign. Surfaces are flat enamel. Depth comes from inversion: limit hands, notice heads and active direction plates turn black on light, or light on black at night. Dark mode is the night platform: black enamel with the same line colours and a light plate in place of the black one.\n\nThe signature motion is the train, a ring marker that slides along the strip map to whichever line is in view. Everything else stays still apart from short colour transitions and a one-time flash on a stop you jump to.",
+    "keyCharacteristics": [
+      "Eleven line colours, one per category, each used only for small identifying marks",
+      "Bilingual pairs: 中文 bold and first, English secondary on the next line",
+      "Stable item codes (BA-01, HF-03…) printed on every stop and linked from the rules",
+      "Number plates for 番; limit hands (≥40番) invert",
+      "Exit yellow is a signal colour, never a category",
+      "One signature motion: the train ring on the strip map"
+    ],
+    "rules": [
+      {
+        "name": "The Line Colour Marks, Never Fills Rule",
+        "body": "A line colour appears only on the line bar (8px), the roundel, station dots, the 4px stop track, stop-dot rings and chip code pills. It never becomes a section background, a card fill or body text.",
+        "section": "colors"
+      },
+      {
+        "name": "The Exit Yellow Is Not A Line Rule",
+        "body": "Yellow means \"look here\": focus, the flag, the branch, 相加. No category may take yellow or a near-yellow. This is why SP is grey (#8e959c) with dark ink.",
+        "section": "colors"
+      },
+      {
+        "name": "The Paired Ink Rule",
+        "body": "Every line colour comes with its own ink (white or #1b1b1b / #111111), chosen so it reads on that colour. Never assume white text on a line colour.",
+        "section": "colors"
+      },
+      {
+        "name": "The Chinese Leads Rule",
+        "body": "In every bilingual pair the Chinese comes first, at the heavier weight and in the stronger ink. English sits on its own line or to the right, one ink step lighter and smaller. English never gets larger or bolder than the Chinese it translates.",
+        "section": "typography"
+      },
+      {
+        "name": "The Plate Numeral Rule",
+        "body": "Anything countable (番, codes, tile faces, costs) is set in Source Sans 3 with tabular lining numerals.",
+        "section": "typography"
+      },
+      {
+        "name": "The Invert, Don't Lift Rule",
+        "body": "To give something more weight, invert it to a black plate (a light plate at night). Don't add a shadow. Limit 番, notice heads, the active direction plate, the 雙食 total and the 不同計 tag all do this.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do give every new category a line colour, a paired ink and a two-letter code, and use the colour only for its bar, roundel, dots, track and code pill.",
+      "Do set every bilingual pair Chinese first (heavier, darker) with English below or beside it in Source Sans 3, one ink step lighter.",
+      "Do put 番 values on plates with tabular numerals. Invert the plate when the value is ≥40番.",
+      "Do use exit yellow (#f5c400) only for focus, selection, the 上次 flag, the 雙食 branch and the 相加 tag.",
+      "Do keep the focus ring a 3px exit-yellow outline at 2px offset on every interactive element.",
+      "Do keep phone strip hit areas at least 44px tall with 26px dots, and switch the strip to a vertical sidebar at 1024px.",
+      "Do show weight by inverting, not with shadow. Keep the ambient shadow for the notice and worked-example cards.",
+      "Do honour `prefers-reduced-motion`: transitions and animations collapse, and smooth scrolling turns off."
+    ],
+    "donts": [
+      "Don't give any category yellow or a near-yellow line colour. Yellow is the signal, not a line.",
+      "Don't fill sections, cards or headers with a line colour, and don't set body text in one.",
+      "Don't put white text on a line colour without checking its paired ink.",
+      "Don't add a second signature motion beside the train. Other motion stays at 0.2–0.35s colour or transform transitions.",
+      "Don't reintroduce green felt, gradient headers or a card-table stack. The thesis rejects the casino look.",
+      "Don't let English outrank Chinese in size, weight or ink."
+    ]
+  }
+}

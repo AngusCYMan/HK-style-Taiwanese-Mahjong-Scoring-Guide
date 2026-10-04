@@ -1,11 +1,10 @@
-
-import { ScoringItem, ScoringCategory } from './types';
+import { ScoringItem, ScoringCategory, CATEGORY_META, CATEGORY_ORDER } from './types';
 
 export const SCORING_DATA: ScoringItem[] = [
   // 1. 🎴 基礎牌型番
-  { id: 'b-1', name: '獨獨', nameEn: 'True Solo', fan: 2, description: '單釣或偏章（只能胡一張特定牌）', descriptionEn: 'Strict single wait for one specific tile', category: ScoringCategory.BASIC },
-  { id: 'b-2', name: '假獨', nameEn: 'False Solo', fan: 1, description: '可組成單釣但有其他胡法', descriptionEn: 'Single wait but alternative wins possible', category: ScoringCategory.BASIC },
-  { id: 'b-8', name: '對碰', nameEn: 'Pung Wait', fan: 2, description: '等對子變刻子', descriptionEn: 'Waiting to complete a pung with a pair', category: ScoringCategory.BASIC },
+  { id: 'b-1', name: '獨獨', nameEn: 'True Solo', fan: 2, description: '單釣、嵌章或邊章（只能胡一張特定牌）', descriptionEn: 'Strict single wait for one specific tile', category: ScoringCategory.BASIC },
+  { id: 'b-2', name: '假獨', nameEn: 'False Solo', fan: 1, description: '以單釣食糊，但手牌另有其他聽張', descriptionEn: 'Single wait but alternative wins possible', category: ScoringCategory.BASIC },
+  { id: 'b-8', name: '對碰', nameEn: 'Pung Wait', fan: 2, description: '雙碰：手持兩對，任何一對成刻即食', descriptionEn: 'Two pairs, either one completing a pung wins', category: ScoringCategory.BASIC },
   { id: 'b-3', name: '無字', nameEn: 'No Honor Tiles', fan: 1, description: '沒有番子（風牌、三元牌）', descriptionEn: 'No wind or dragon tiles', category: ScoringCategory.BASIC },
   { id: 'b-4', name: '將眼', nameEn: 'Ranked Pair (Eyes)', fan: 2, description: '對子是2、5或8', descriptionEn: 'Pair consists of 2, 5, or 8', category: ScoringCategory.BASIC },
   { id: 'b-5', name: '平胡', nameEn: 'All Chows', fan: 3, description: '5個順子，0個刻子', descriptionEn: 'Hand consists only of chows and a pair', category: ScoringCategory.BASIC },
@@ -94,10 +93,30 @@ export const SCORING_DATA: ScoringItem[] = [
 
   // 11. ⭐ 特殊牌型
   { id: 'p-1', name: '大雞胡', nameEn: 'Great Chicken Hu', fan: 30, description: '不計底番，胡出時為30番', descriptionEn: 'Special 30-fan win (Base fan not counted)', category: ScoringCategory.SPECIAL_PATTERNS },
-  { id: 'p-2', name: '十六不搭', nameEn: 'Sixteen Unrelated', fan: 40, description: '全手不搭', descriptionEn: '16 tiles with no relations', category: ScoringCategory.SPECIAL_PATTERNS },
-  { id: 'p-3', name: '十三么', nameEn: 'Thirteen Orphans', fan: 80, description: '所有么九及字牌各一', descriptionEn: 'All terminal and honor tiles plus one duplicate', category: ScoringCategory.SPECIAL_PATTERNS },
-  { id: 'p-4', name: '嚦咕嚦咕', nameEn: 'Seven Pairs Plus One', fan: 40, description: '8個對子', descriptionEn: 'Hand consists of 8 pairs', category: ScoringCategory.SPECIAL_PATTERNS },
-  { id: 'p-5', name: '嚦咕嚦咕 (8飛)', nameEn: 'Super Eight Pairs', fan: 50, description: '8對聽8張', descriptionEn: '8 pairs waiting on 8 tiles', category: ScoringCategory.SPECIAL_PATTERNS },
-  { id: 'p-6', name: '間間胡', nameEn: 'All Concealed Pungs', fan: 100, description: '自摸對對胡', descriptionEn: 'Winning All Pungs by self-draw', category: ScoringCategory.SPECIAL_PATTERNS },
+  { id: 'p-2', name: '十六不搭', nameEn: 'Sixteen Unrelated', fan: 40, description: '16張互不相搭，食糊張成對', descriptionEn: '16 unrelated tiles, winning tile forms the pair', category: ScoringCategory.SPECIAL_PATTERNS },
+  { id: 'p-3', name: '十三么', nameEn: 'Thirteen Orphans', fan: 80, description: '13種么九字牌各一，其中一種成對，再加一組（共17張）', descriptionEn: 'One of each of the 13 terminals/honors, one paired, plus one set (17 tiles)', category: ScoringCategory.SPECIAL_PATTERNS },
+  { id: 'p-4', name: '嚦咕嚦咕', nameEn: 'Seven Pairs Plus One', fan: 40, description: '7對 + 1刻（共17張）', descriptionEn: '7 pairs plus 1 pung (17 tiles)', category: ScoringCategory.SPECIAL_PATTERNS },
+  { id: 'p-5', name: '嚦咕嚦咕 (8飛)', nameEn: 'Super Eight Pairs', fan: 50, description: '手持8對，聽8張中任何一張成刻', descriptionEn: 'Holding 8 pairs, any of the 8 tiles completes a pung', category: ScoringCategory.SPECIAL_PATTERNS },
+  { id: 'p-10', name: '雙食', nameEn: 'Double Interpretation', fan: 'A+B', description: '同一手牌可拆成兩種糊型（如嚦咕嚦咕 + 標準5組1對），兩種各自計番後相加', descriptionEn: 'Hand reads as two valid winning forms; score each separately and add them', example: '萬子 11 22 33 44 55 66 88 999', category: ScoringCategory.SPECIAL_PATTERNS },
+  { id: 'p-6', name: '間間胡', nameEn: 'All Concealed Pungs', fan: 100, description: '全手5個暗刻自摸（已包含對對胡、五暗刻）', descriptionEn: 'Self-drawn hand of 5 concealed pungs (includes All Pungs & Five Concealed Pungs)', category: ScoringCategory.SPECIAL_PATTERNS },
   { id: 'p-7', name: '花胡 (8隻花)', nameEn: 'Eight Flowers Win', fan: 100, description: '摸齊8張花', descriptionEn: 'Collect all 8 flower tiles instantly', category: ScoringCategory.SPECIAL_PATTERNS },
+  { id: 'p-8', name: '花胡 (1搶7)', nameEn: 'Flower Win (1 Steals 7)', fan: 30, description: '1搶7', descriptionEn: '1 steals 7', category: ScoringCategory.SPECIAL_PATTERNS },
+  { id: 'p-9', name: '花胡 (7搶1)', nameEn: 'Flower Win (7 Steals 1)', fan: 30, description: '7搶1', descriptionEn: '7 steals 1', category: ScoringCategory.SPECIAL_PATTERNS },
 ];
+
+export interface CodedItem extends ScoringItem {
+  /** Stable reference code, e.g. BA-01. Rules link to items by this. */
+  code: string;
+}
+
+export const GROUPED_ITEMS: { category: ScoringCategory; items: CodedItem[] }[] = CATEGORY_ORDER.map((category) => ({
+  category,
+  items: SCORING_DATA.filter((item) => item.category === category).map((item, idx) => ({
+    ...item,
+    code: `${CATEGORY_META[category].code}-${String(idx + 1).padStart(2, '0')}`
+  }))
+}));
+
+export const ITEM_BY_ID: Record<string, CodedItem> = Object.fromEntries(
+  GROUPED_ITEMS.flatMap((group) => group.items).map((item) => [item.id, item])
+);
